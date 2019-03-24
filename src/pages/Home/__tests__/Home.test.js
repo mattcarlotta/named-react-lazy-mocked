@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Home from '../index.js';
 
 describe('Home', () => {

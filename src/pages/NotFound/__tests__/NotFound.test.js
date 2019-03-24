@@ -1,4 +1,3 @@
-import * as React from 'react';
 import NotFound from '../index.js';
 
 describe('NotFound', () => {

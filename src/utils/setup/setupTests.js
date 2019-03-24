@@ -4,9 +4,9 @@ import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { mountWrap, shallowWrap } from 'utils';
 
-configure({ adapter: new Adapter() });
+jest.spyOn(React, 'lazy');
 
-React.lazy = jest.fn();
+configure({ adapter: new Adapter() });
 
 /*
 THE BELOW ARE ACCESSIBLE AND PREDEFINED FOR ALL *.TEST.JS FILES

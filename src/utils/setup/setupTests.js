@@ -2,7 +2,6 @@ import { JSDOM } from 'jsdom';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { mountWrap, shallowWrap } from 'utils';
-import React from '../__mocks__/react';
 
 configure({ adapter: new Adapter() });
 
@@ -23,7 +22,7 @@ global.HTMLElement = window.HTMLElement;
 global.HTMLAnchorElement = window.HTMLAnchorElement;
 global.shallow = shallowWrap;
 global.mount = mountWrap;
-global.React = React;
+global.React = require('../__mocks__/react');
 global.BrowserRouter = require('react-router-dom').BrowserRouter;
 global.Route = require('react-router-dom').Route;
 global.Switch = require('react-router-dom').Switch;

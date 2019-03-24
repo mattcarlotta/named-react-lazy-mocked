@@ -1,12 +1,10 @@
-const mockFunctions = () => {
-  const original = require.requireActual('react');
+const mockModule = () => {
+  const originalModule = require.requireActual('react');
   return {
-    ...original, // Pass down all the exported objects
+    ...originalModule,
     lazy: jest.fn(),
   };
 };
 
-jest.mock('react', () => mockFunctions());
-const React = require.requireMock('react');
-
-module.exports = React;
+jest.mock('react', () => mockModule());
+module.exports = require.requireMock('react');

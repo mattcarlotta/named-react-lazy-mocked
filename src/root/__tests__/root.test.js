@@ -14,7 +14,8 @@ describe('App', () => {
   it('should partially mock React module', async () => {
     expect(jest.isMockFunction(React)).toBe(false);
     expect(jest.isMockFunction(React.lazy)).toBe(true);
+    expect(jest.isMockFunction(React2)).toBe(false);
     expect(jest.isMockFunction(React2.lazy)).toBe(true);
-    expect(jest.isMockFunction(require('react').lazy)).toBe(true); // eslint-disable-line global-require
+    expect(jest.isMockFunction(await require('react').lazy)).toBe(true); // eslint-disable-line global-require
   });
 });

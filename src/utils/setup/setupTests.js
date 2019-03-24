@@ -1,9 +1,12 @@
+import React from 'react';
 import { JSDOM } from 'jsdom';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { mountWrap, shallowWrap } from 'utils';
 
 configure({ adapter: new Adapter() });
+
+React.lazy = jest.fn();
 
 /*
 THE BELOW ARE ACCESSIBLE AND PREDEFINED FOR ALL *.TEST.JS FILES
@@ -22,7 +25,7 @@ global.HTMLElement = window.HTMLElement;
 global.HTMLAnchorElement = window.HTMLAnchorElement;
 global.shallow = shallowWrap;
 global.mount = mountWrap;
-global.React = require('react');
+// global.React = React;
 global.BrowserRouter = require('react-router-dom').BrowserRouter;
 global.Route = require('react-router-dom').Route;
 global.Switch = require('react-router-dom').Switch;

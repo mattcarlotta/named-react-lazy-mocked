@@ -2,7 +2,6 @@ import { JSDOM } from 'jsdom';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { mountWrap, shallowWrap } from 'utils';
-import '../__mocks__/react';
 
 configure({ adapter: new Adapter() });
 

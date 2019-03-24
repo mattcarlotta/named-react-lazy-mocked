@@ -19,7 +19,7 @@ describe('App', () => {
     expect(jest.isMockFunction(React2.lazy)).toBe(true);
   });
 
-  it('should no longer be partially mocked within this test', () => {
+  it('should no longer be partially mocked within the test file', () => {
     React.lazy.mockRestore();
     expect(jest.isMockFunction(React.lazy)).toBe(false);
   });

@@ -1,4 +1,4 @@
-import * as React3 from 'react';
+import * as React from 'react';
 import App from '../index.js';
 
 const React2 = require('react');
@@ -17,7 +17,5 @@ describe('App', () => {
     expect(jest.isMockFunction(React.lazy)).toBe(true);
     expect(jest.isMockFunction(React2)).toBe(false);
     expect(jest.isMockFunction(React2.lazy)).toBe(true);
-    expect(jest.isMockFunction(React3)).toBe(false);
-    expect(jest.isMockFunction(React3.lazy)).toBe(true);
   });
 });
